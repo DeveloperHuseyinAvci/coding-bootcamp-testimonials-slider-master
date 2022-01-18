@@ -58,7 +58,8 @@ body {
   top: 5%;
   right: 5%;
 }
-.img-container img {
+
+.img-container img{
   height: 75%;
   box-shadow: 10px 10px 30px 1px darkgray;
   z-index: 1;
