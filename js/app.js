@@ -1,3 +1,4 @@
+
 const textContent = document.querySelectorAll('.text-content')
 const imgProfile = document.querySelectorAll('.profile-img')
 
@@ -8,12 +9,10 @@ let textContentNumber = textContent.length
 let imgProfileNumber = imgProfile.length
 let slideNo = 0
 
-
 btnPrev.addEventListener('click', prevFunc)
 btnNext.addEventListener('click', nextFunc)
 
 slideShow(slideNo)
-
 
 function nextFunc() {
     slideNo++;
@@ -25,20 +24,82 @@ function prevFunc() {
     slideShow(slideNo)
 }
 
-
-
 function slideShow(slideNumber) {
-    slideNo = slideNumber
 
-    if (slideNumber >= textContentNumber && slideNumber >= imgProfileNumber) slideNo = 0
-    if (slideNumber < 0) slideNo = slideNumber - 1
+    slideNumber = slideNo
+
+    if (slideNumber >= textContentNumber && slideNumber >= imgProfileNumber) {
+        slideNo = 0
+    }
+
+    if (slideNumber < 0) {
+        slideNumber = slideNo - 1
+    }
+
+    // if(slideNumber === 0){
+    //    slideNumber = slideNo
+    // }else if(slideNumber === textContentNumber && slideNumber === imgProfileNumber){
+    //     slideNumber = 0
+    // }
+
+    //prev tuşu çalışmıyor onu çöz if bloğunda çalış
+
 
     for (let i = 0; i < slideNumber; i++) {
         textContent[i].style.display = "none"
         imgProfile[i].style.display = "none"
     }
 
+    console.log(textContent[slideNo]);
+    console.log(imgProfile[slideNo]);
+
     textContent[slideNo].style.display = "block";
     imgProfile[slideNo].style.display = "block";
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
